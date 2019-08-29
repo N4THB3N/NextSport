@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="478.0" prefWidth="555.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.TallaController">
+   <children>
+      <Label layoutX="186.0" layoutY="28.0" text="Tabla Tallas ">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="40.0" layoutY="74.0" text="Codigo Talla " />
+      <Label layoutX="307.0" layoutY="74.0" text="Descripcion" />
+      <ComboBox fx:id="cmbCodTalla" disable="true" layoutX="128.0" layoutY="70.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow />
+         </effect></ComboBox>
+      <TextField fx:id="txtDescripcion" layoutX="383.0" layoutY="70.0" />
+      <TableView fx:id="tblTallas" layoutX="15.0" layoutY="112.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="299.0" prefWidth="519.0">
+        <columns>
+          <TableColumn fx:id="colCodTalla" prefWidth="134.0" text="Codigo Talla" />
+          <TableColumn fx:id="colDescripcion" prefWidth="384.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="40.0" layoutY="423.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="37.0" prefWidth="70.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="161.0" layoutY="423.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="37.0" prefWidth="70.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="303.0" layoutY="423.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="70.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="433.0" layoutY="423.0" mnemonicParsing="false" onAction="#reporte" prefHeight="37.0" prefWidth="70.0" text="Reporte" />
+      <Button layoutX="15.0" layoutY="16.0" mnemonicParsing="false" onAction="#ventanaPrincipal" text="Menu Principal" />
+   </children>
+</AnchorPane>

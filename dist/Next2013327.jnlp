@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="utf-8"?>
+<jnlp spec="1.0" xmlns:jfx="http://javafx.com" href="Next2013327.jnlp">
+  <information>
+    <title>Next2013327</title>
+    <vendor>informatica</vendor>
+    <description>null</description>
+    <offline-allowed/>
+  </information>
+  <resources>
+    <j2se version="1.6+" href="http://java.sun.com/products/autodl/j2se"/>
+    <jar href="Next2013327.jar" size="393290" download="eager" />
+    <jar href="lib\commons-collections-3.2.1.jar" size="575389" download="eager" />
+    <jar href="lib\commons-digester-2.1.jar" size="196768" download="eager" />
+    <jar href="lib\commons-logging-1.1.jar" size="52592" download="eager" />
+    <jar href="lib\groovy-all-2.0.1.jar" size="6191960" download="eager" />
+    <jar href="lib\iText-2.1.7.js2.jar" size="1130575" download="eager" />
+    <jar href="lib\jasperreports-5.6.0.jar" size="4989676" download="eager" />
+    <jar href="lib\poi-3.7-20101029.jar" size="1675036" download="eager" />
+    <jar href="lib\schudt-javafx-datepicker-0.0.2.jar" size="67087" download="eager" />
+    <jar href="lib\sqljdbc4.jar" size="584207" download="eager" />
+  </resources>
+  <applet-desc  width="800" height="600" main-class="com.javafx.main.NoJavaFXFallback"  name="Next2013327" >
+    <param name="requiredFXVersion" value="8.0+"/>
+  </applet-desc>
+  <jfx:javafx-desc  width="800" height="600" main-class="org.natancastaneda.sistema.Principal"  name="Next2013327" />
+  <update check="always"/>
+</jnlp>

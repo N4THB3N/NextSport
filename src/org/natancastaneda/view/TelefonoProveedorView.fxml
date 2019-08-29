@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="464.0" prefWidth="548.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.TelefonoProveedorController">
+   <children>
+      <Label layoutX="109.0" layoutY="49.0" text="Tabla Telefono Proveedor">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="31.0" layoutY="99.0" text="Codigo Proveedor" />
+      <Label layoutX="32.0" layoutY="141.0" text="Codigo Telefono Proveedor" />
+      <Label layoutX="333.0" layoutY="99.0" text="Numero" />
+      <Label layoutX="302.0" layoutY="141.0" text="Descripcion" />
+      <ComboBox fx:id="cmbCodigo" layoutX="189.0" layoutY="138.0" prefHeight="23.0" prefWidth="105.0" />
+      <TextField fx:id="txtNumero" layoutX="385.0" layoutY="95.0" />
+      <TextField fx:id="txtDescripcion" layoutX="385.0" layoutY="137.0" />
+      <TableView fx:id="tblTelefonos" layoutX="16.0" layoutY="177.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="243.0" prefWidth="517.0">
+        <columns>
+            <TableColumn fx:id="colNumero" prefWidth="261.0" text="Numero" />
+            <TableColumn fx:id="colDescripcion" prefWidth="253.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="54.0" layoutY="420.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="182.0" layoutY="420.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="309.0" layoutY="420.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="443.0" layoutY="420.0" mnemonicParsing="false" text="Reporte" />
+      <ComboBox fx:id="cmbProveedor" layoutX="163.0" layoutY="95.0" prefHeight="25.0" prefWidth="146.0" />
+      <Button layoutX="451.0" layoutY="14.0" mnemonicParsing="false" onAction="#ventanaProveedores" text="Proveedores" />
+      <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#ventanaPrincipal" text="Menu Principal" />
+   </children>
+</AnchorPane>

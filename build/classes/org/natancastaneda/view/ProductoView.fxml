@@ -1,0 +1,43 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.image.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="483.0" prefWidth="598.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.ProductoController">
+   <children>
+      <Label layoutX="166.0" layoutY="14.0" text="Tabla Productos">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="65.0" text="Codigo Producto" />
+      <Label layoutX="18.0" layoutY="104.0" text="Categoria " />
+      <Label layoutX="14.0" layoutY="145.0" text=" Marca " />
+      <Label layoutX="20.0" layoutY="178.0" text=" Talla" />
+      <Label layoutX="334.0" layoutY="65.0" text="Imagen " />
+      <ComboBox fx:id="cmbCodigoPro" disable="true" layoutX="122.0" layoutY="61.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="25.0" prefWidth="138.0" />
+      <TextField fx:id="txtImagen" layoutX="391.0" layoutY="61.0" prefHeight="25.0" prefWidth="138.0" />
+      <TableView fx:id="tblProductos" layoutX="6.0" layoutY="221.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="217.0" prefWidth="587.0">
+        <columns>
+            <TableColumn fx:id="colExistencia" prefWidth="82.0" text="Existencia" />
+            <TableColumn fx:id="colPreDocena" prefWidth="160.0" text="P. Docena" />
+            <TableColumn fx:id="colPreUnitario" prefWidth="179.0" text="P. Unitario" />
+          <TableColumn fx:id="colPreMayor" prefWidth="164.0" text="P. Mayor" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="29.0" layoutY="444.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="162.0" layoutY="444.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="340.0" layoutY="444.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="495.0" layoutY="444.0" mnemonicParsing="false" onAction="#generarReporte" text="Reporte" />
+      <ComboBox fx:id="cmbCodCategoria" layoutX="122.0" layoutY="100.0" prefHeight="25.0" prefWidth="138.0" />
+      <ComboBox fx:id="cmbCodigo" layoutX="122.0" layoutY="141.0" prefHeight="25.0" prefWidth="138.0" />
+      <ComboBox fx:id="cmbCodTalla" layoutX="122.0" layoutY="174.0" prefHeight="25.0" prefWidth="138.0" />
+      <Label layoutX="325.0" layoutY="91.0" text="Descripción" />
+      <TextField fx:id="txtDescripcion" layoutX="391.0" layoutY="87.0" prefHeight="25.0" prefWidth="138.0" />
+      <ImageView fx:id="imgProducto" fitHeight="96.0" fitWidth="128.0" layoutX="396.0" layoutY="118.0" pickOnBounds="true" preserveRatio="true" />
+      <Button layoutX="20.0" layoutY="14.0" mnemonicParsing="false" onAction="#ventanaPrincipal" text="Menu Principal" />
+   </children>
+</AnchorPane>

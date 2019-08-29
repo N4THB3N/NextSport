@@ -1,0 +1,35 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="433.0" prefWidth="513.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.EmailProveedorController">
+   <children>
+      <Label layoutX="110.0" layoutY="29.0" text="Tabla Email Proveedor">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutY="75.0" text="Codigo Email Proveedor" />
+      <Label layoutX="28.0" layoutY="115.0" text="Codigo Proveedor" />
+      <Label layoutX="292.0" layoutY="75.0" text="Descripcion" />
+      <Label layoutX="292.0" layoutY="115.0" text="Email" />
+      <ComboBox fx:id="cmbCodigo" layoutX="135.0" layoutY="71.0" prefWidth="150.0" />
+      <TextField fx:id="txtDescripcion" layoutX="362.0" layoutY="71.0" />
+      <TextField fx:id="txtEmail" layoutX="323.0" layoutY="111.0" />
+      <TableView fx:id="tblEmails" layoutX="18.0" layoutY="145.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="212.0" prefWidth="478.0">
+        <columns>
+            <TableColumn fx:id="colDescripcion" prefWidth="241.0" text="Descripcion" />
+            <TableColumn fx:id="colEmail" prefWidth="235.0" text="Email" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="46.0" layoutY="373.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="37.0" prefWidth="62.0" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="166.0" layoutY="373.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="37.0" prefWidth="62.0" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="292.0" layoutY="373.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="62.0" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="406.0" layoutY="373.0" mnemonicParsing="false" onAction="#reporte" prefHeight="37.0" prefWidth="62.0" text="Reporte" />
+      <ComboBox fx:id="cmbProveedor" layoutX="135.0" layoutY="111.0" prefWidth="150.0" />
+      <Button layoutX="20.0" layoutY="17.0" mnemonicParsing="false" onAction="#ventanaProveedores" text="Proveedores" />
+   </children>
+</AnchorPane>

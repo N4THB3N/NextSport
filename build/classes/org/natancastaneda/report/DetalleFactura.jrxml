@@ -1,0 +1,69 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="DetalleFactura" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="7385f7f9-c1bf-4351-8f4b-c58ab43db7de">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[sp_ListarDetalleFactura]]>
+	</queryString>
+	<field name="codigoDetalleFactura" class="java.lang.Integer"/>
+	<field name="cantidad" class="java.lang.Integer"/>
+	<field name="numeroFactura" class="java.lang.Integer"/>
+	<field name="precio" class="java.math.BigDecimal"/>
+	<field name="codigoProducto" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="145" y="0" width="100" height="20" uuid="8ecbcb9f-94eb-43ee-8ed7-03ca18e14338"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Cantidad]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="f1e28d55-306b-45bf-92a8-8018339c7342"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Numero Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="304" y="0" width="100" height="20" uuid="257b0789-4911-40a4-b9ec-936c68505f7a"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Precio]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="450" y="0" width="100" height="20" uuid="ba9e613f-8771-4c40-bfc2-74530138a24d"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Codigo Producto]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="145" y="0" width="100" height="20" uuid="a940d22e-cc4a-46ce-bd21-8d34dc0dd390"/>
+				<textFieldExpression><![CDATA[$F{cantidad}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="db4a3ca3-18c0-4e83-b4c5-04e2f03ae923"/>
+				<textFieldExpression><![CDATA[$F{numeroFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="304" y="0" width="100" height="20" uuid="59d03da0-5be8-41ed-ae99-0e172439eec9"/>
+				<textFieldExpression><![CDATA[$F{precio}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="450" y="0" width="100" height="20" uuid="303ef154-05a2-4d2e-90d5-99038d5f517e"/>
+				<textFieldExpression><![CDATA[$F{codigoProducto}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+</jasperReport>

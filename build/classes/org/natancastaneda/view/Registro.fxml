@@ -1,0 +1,40 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="459.0" prefWidth="496.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.RegistroController">
+   <children>
+      <Button fx:id="btnNuevo" layoutX="24.0" layoutY="411.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="390.0" layoutY="411.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="201.0" layoutY="411.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <TableView fx:id="tblRegistros" layoutX="47.0" layoutY="188.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="215.0" prefWidth="402.0">
+        <columns>
+          <TableColumn fx:id="colNombre" prefWidth="201.0" text="Nombre del usuario" />
+          <TableColumn fx:id="colUsuario" prefWidth="199.0" text="Usuario" />
+        </columns>
+      </TableView>
+      <TextField fx:id="txtNombre" layoutX="106.0" layoutY="101.0" />
+      <Label layoutY="105.0" text="Nombre del usuario" />
+      <Label layoutX="10.0" layoutY="148.0" text="Email" />
+      <TextField fx:id="txtEmail" layoutX="59.0" layoutY="144.0" />
+      <ComboBox fx:id="cmbCodigo" layoutX="91.0" layoutY="63.0" prefWidth="150.0" />
+      <Label layoutX="20.0" layoutY="67.0" text="Codigo" />
+      <Label layoutX="271.0" layoutY="67.0" text="Usuario" />
+      <TextField fx:id="txtUsuario" layoutX="336.0" layoutY="63.0" />
+      <TextField fx:id="txtContrasena" layoutX="336.0" layoutY="110.0" />
+      <Label layoutX="262.0" layoutY="114.0" text="Contrasena" />
+      <Label layoutX="234.0" layoutY="156.0" text="Tipo de Usuario" />
+      <TextField fx:id="txtTipo" layoutX="336.0" layoutY="152.0" />
+      <Label layoutX="177.0" layoutY="14.0" text="Registro">
+         <font>
+            <Font name="Arial" size="38.0" />
+         </font>
+      </Label>
+      <Button layoutX="13.0" layoutY="14.0" mnemonicParsing="false" onAction="#ventanaLogin" text="Login" />
+   </children>
+</AnchorPane>

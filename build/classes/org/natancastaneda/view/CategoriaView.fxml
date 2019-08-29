@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="470.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.CategoriaController">
+   <children>
+      <Label layoutX="183.0" layoutY="27.0" text="Tabla Categorias">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="64.0" layoutY="91.0" text="Codigo Categoria " />
+      <Label layoutX="64.0" layoutY="128.0" text="Descripcion" />
+      <ComboBox fx:id="cmbCodCategoria" disable="true" layoutX="190.0" layoutY="87.0" prefWidth="150.0" promptText="..............Codigo............">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <TextField fx:id="txtDescripcion" layoutX="190.0" layoutY="124.0" prefHeight="25.0" prefWidth="343.0" promptText="Ingrese la descripcion de la Categoria">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblCategorias" layoutX="22.0" layoutY="169.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="231.0" prefWidth="556.0">
+        <columns>
+          <TableColumn fx:id="colCodigo" prefWidth="109.0" text="Codigo" />
+          <TableColumn fx:id="colDescripcion" prefWidth="434.0" text="Descripcion" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="90.0" layoutY="416.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="37.0" prefWidth="71.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="207.0" layoutY="416.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="37.0" prefWidth="79.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="340.0" layoutY="416.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="71.0" text="Editar ">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="464.0" layoutY="416.0" mnemonicParsing="false" onAction="#reporte" prefHeight="37.0" prefWidth="71.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnNuevo1" layoutX="22.0" layoutY="14.0" mnemonicParsing="false" onAction="#ventanaPrincipal" prefHeight="25.0" prefWidth="108.0" text="Menu Principal">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+   </children>
+   <effect>
+      <InnerShadow />
+   </effect>
+</AnchorPane>

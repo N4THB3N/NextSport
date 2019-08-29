@@ -1,0 +1,86 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="457.0" prefWidth="525.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.CompraController">
+   <children>
+      <Label layoutX="149.0" layoutY="23.0" text="Tabla Compras ">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="21.0" layoutY="69.0" text="Numero Documento" />
+      <Label layoutX="21.0" layoutY="98.0" text="Codigo Proveedor" />
+      <Label layoutX="21.0" layoutY="128.0" text="Direccion" />
+      <TextField fx:id="txtDireccion" layoutX="138.0" layoutY="124.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <Label layoutX="322.0" layoutY="78.0" text="Fecha" />
+      <Label layoutX="288.0" layoutY="128.0" text="Descripcion" />
+      <TextField fx:id="txtDescripcion" layoutX="362.0" layoutY="124.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblCompras" layoutX="14.0" layoutY="156.0" onKeyPressed="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="208.0" prefWidth="499.0">
+        <columns>
+            <TableColumn fx:id="colFecha" prefWidth="132.0" text="Fecha" />
+            <TableColumn fx:id="colDireccion" prefWidth="258.0" text="Direccion" />
+            <TableColumn fx:id="colTotal" prefWidth="108.0" text="Total" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="34.0" layoutY="389.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="37.0" prefWidth="68.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="138.0" layoutY="389.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="37.0" prefWidth="68.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="220.0" layoutY="389.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="68.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="304.0" layoutY="389.0" mnemonicParsing="false" onAction="#generarReporte" prefHeight="37.0" prefWidth="68.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ComboBox fx:id="cmbNumero" disable="true" layoutX="138.0" layoutY="65.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <ComboBox fx:id="cmbProveedor" layoutX="138.0" layoutY="94.0" prefWidth="150.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <Button layoutX="14.0" layoutY="11.0" mnemonicParsing="false" onAction="#ventanaPrincipal" text="Menu Principal" />
+      <Button fx:id="btnDetalle" layoutX="403.0" layoutY="389.0" mnemonicParsing="false" onMouseClicked="#detalleCompra" prefHeight="37.0" prefWidth="68.0" text="Detalle">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <GridPane fx:id="grpFecha" layoutX="361.0" layoutY="80.0" prefHeight="25.0" prefWidth="149.0">
+        <columnConstraints>
+          <ColumnConstraints hgrow="SOMETIMES" maxWidth="70.0" minWidth="0.0" prefWidth="0.0" />
+        </columnConstraints>
+        <rowConstraints>
+          <RowConstraints maxHeight="11.0" minHeight="10.0" prefHeight="11.0" vgrow="SOMETIMES" />
+        </rowConstraints>
+      </GridPane>
+   </children>
+</AnchorPane>

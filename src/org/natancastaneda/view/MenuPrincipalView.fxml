@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.*?>
+<?import javafx.scene.image.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="600.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.MenuPrincipalController">
+   <children>
+      <ImageView fitHeight="600.0" fitWidth="600.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../image/Logo.jpg" />
+         </image>
+      </ImageView>
+      <MenuBar layoutX="14.0" layoutY="14.0">
+         <menus>
+            <Menu mnemonicParsing="false" text="Modulos">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCategorias" text="Categorias" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaMarcas" text="Marcas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaTallas" text="Tallas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProductos" text="Productos" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaClientes" text="Clientes" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaCompras" text="Compras" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaFacturas" text="Facturas" />
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaProveedores" text="Proveedores" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Reportes">
+               <items>
+                  <MenuItem mnemonicParsing="false" text="Reporte Productos" />
+               </items>
+            </Menu>
+            <Menu mnemonicParsing="false" text="Ayuda">
+               <items>
+                  <MenuItem mnemonicParsing="false" onAction="#ventanaAbout" text="Acerca de" />
+               </items>
+            </Menu>
+         </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

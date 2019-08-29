@@ -1,0 +1,128 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteFactura" language="groovy" pageWidth="612" pageHeight="792" columnWidth="555" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="12ff28c7-87da-4ea8-8566-e962129bd70d">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<parameter name="SUBREPORT_DIR" class="java.lang.String" isForPrompting="false">
+		<defaultValueExpression><![CDATA["C:\\Users\\Nathan Castañeda\\Desktop\\Castaneda Hidalgo, Natan Benjamin 2013327\\Next Sport v 2.0\\Castañeda Hidalgo, Natán Benjamín. 2013327\\NextSport2013327\\src\\org\\natancastaneda\\report\\"]]></defaultValueExpression>
+	</parameter>
+	<queryString>
+		<![CDATA[sp_ListarFacturas]]>
+	</queryString>
+	<field name="numeroFactura" class="java.lang.Integer"/>
+	<field name="estado" class="java.lang.String"/>
+	<field name="fecha" class="java.sql.Timestamp"/>
+	<field name="nit" class="java.lang.String"/>
+	<field name="total" class="java.math.BigDecimal"/>
+	<field name="codigoCliente" class="java.lang.Integer"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="180" y="0" width="252" height="40" uuid="d1219109-2a47-4e8f-8c6f-179134572ddb"/>
+				<textElement>
+					<font size="24" isBold="true" isUnderline="false"/>
+				</textElement>
+				<text><![CDATA[Next Sport Tiendas]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="180" y="40" width="257" height="20" uuid="76a59c59-9f86-481f-b54c-6f4effb9c306"/>
+				<text><![CDATA[Siempre habrá alguien que quiere lo mejor para tí...]]></text>
+			</staticText>
+			<image>
+				<reportElement x="16" y="8" width="93" height="52" uuid="319b9ffa-377b-41dc-aae6-317831854518"/>
+				<imageExpression><![CDATA["C:\\Users\\informatica\\Desktop\\Castañeda Hidalgo, Natán Benjamín. 2013327\\NextSport2013327\\src\\org\\natancastaneda\\report\\descarga.png"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="68" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="15f854a9-6896-4ee2-9ddc-6a13bcf36b12"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Numero Factura]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="0" y="30" width="100" height="20" uuid="c83ced45-ebe6-421b-8d01-5b86d1ed9e42"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Estado]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="0" width="100" height="20" uuid="afcd0a2a-7016-45ea-9d65-ffd8fc830e43"/>
+				<textElement>
+					<font fontName="Arial Black"/>
+				</textElement>
+				<text><![CDATA[Fecha]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="285" y="30" width="100" height="20" uuid="627b96b1-6c8f-4a4b-a6de-af3f8b511db5"/>
+				<textElement>
+					<font fontName="Arial Black" isBold="true"/>
+				</textElement>
+				<text><![CDATA[Total]]></text>
+			</staticText>
+			<textField>
+				<reportElement x="109" y="0" width="100" height="20" uuid="d4146152-4998-4f9e-a9b1-949eca158474"/>
+				<textFieldExpression><![CDATA[$F{numeroFactura}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="109" y="30" width="100" height="20" uuid="f4de7ca3-130b-4f5a-9381-d1ce49df4b06"/>
+				<textFieldExpression><![CDATA[$F{estado}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="0" width="100" height="20" uuid="595f0d9f-d7a8-408e-bce9-97690442c3af"/>
+				<textFieldExpression><![CDATA[$F{fecha}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="407" y="30" width="100" height="20" uuid="e5866986-e912-4804-8a92-bbfe59cda7ab"/>
+				<textFieldExpression><![CDATA[$F{total}]]></textFieldExpression>
+			</textField>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<line>
+				<reportElement x="10" y="0" width="562" height="1" uuid="31f6347a-6c21-477e-9ee3-87f6dbb36a08"/>
+				<graphicElement>
+					<pen lineWidth="5.0" lineColor="#FF0000"/>
+				</graphicElement>
+			</line>
+			<staticText>
+				<reportElement x="163" y="14" width="244" height="37" uuid="b57beb92-991a-4b3d-ab8f-4830e4cab032"/>
+				<textElement textAlignment="Center" verticalAlignment="Middle">
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[DETALLE FACTURA]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<subreport>
+				<reportElement x="0" y="0" width="572" height="125" uuid="03edf662-2f01-4e39-a7eb-e6c7956f55e9"/>
+				<connectionExpression><![CDATA[$P{REPORT_CONNECTION}]]></connectionExpression>
+				<subreportExpression><![CDATA[$P{SUBREPORT_DIR} + "DetalleFactura.jasper"]]></subreportExpression>
+			</subreport>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch">
+			<staticText>
+				<reportElement x="10" y="19" width="153" height="22" uuid="398464fe-fccf-4c60-8708-f3eeb87e89e5"/>
+				<text><![CDATA[Next Sport Application]]></text>
+			</staticText>
+		</band>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

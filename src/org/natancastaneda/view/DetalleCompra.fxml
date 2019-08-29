@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.effect.*?>
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="451.0" prefWidth="568.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.DetalleCompraController">
+   <children>
+      <Label layoutX="146.0" layoutY="24.0" text="Tabla Detalle Compra">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="20.0" layoutY="70.0" text="Codigo Producto" />
+      <Label layoutX="17.0" layoutY="96.0" text="Codigo Proveedor" />
+      <Label layoutX="17.0" layoutY="123.0" text="Cantidad" />
+      <Label layoutX="295.0" layoutY="70.0" text="Codigo Detalle Compra" />
+      <Label layoutX="296.0" layoutY="101.0" text="Numero Documento" />
+      <Label layoutX="17.0" layoutY="146.0" text="Costo Unitario" />
+      <ComboBox fx:id="cmbCodigo" layoutX="427.0" layoutY="66.0" prefHeight="25.0" prefWidth="117.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </ComboBox>
+      <TextField fx:id="txtCostoU" layoutX="134.0" layoutY="155.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TextField fx:id="txtCantidad" layoutX="135.0" layoutY="127.0">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TextField>
+      <TableView fx:id="tblDetalles" layoutX="14.0" layoutY="188.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="190.0" prefWidth="536.0">
+        <columns>
+            <TableColumn fx:id="colCantidad" prefWidth="87.0" text="Cantidad" />
+            <TableColumn fx:id="colNumero" prefWidth="127.0" text="Numero" />
+            <TableColumn fx:id="colCostoU" prefWidth="177.0" text="Costo Unitario" />
+            <TableColumn fx:id="colSubTotal" prefWidth="144.0" text="Sub Total" />
+        </columns>
+         <effect>
+            <InnerShadow />
+         </effect>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="25.0" layoutY="400.0" mnemonicParsing="false" onAction="#nuevo" prefHeight="37.0" prefWidth="62.0" text="Nuevo">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEliminar" layoutX="164.0" layoutY="400.0" mnemonicParsing="false" onAction="#eliminar" prefHeight="37.0" prefWidth="62.0" text="Eliminar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnEditar" layoutX="327.0" layoutY="400.0" mnemonicParsing="false" onAction="#editar" prefHeight="37.0" prefWidth="62.0" text="Editar">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <Button fx:id="btnReporte" layoutX="455.0" layoutY="406.0" mnemonicParsing="false" prefHeight="37.0" prefWidth="62.0" text="Reporte">
+         <effect>
+            <InnerShadow />
+         </effect>
+      </Button>
+      <ComboBox fx:id="cmbProducto" layoutX="135.0" layoutY="66.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbProveedor" layoutX="135.0" layoutY="97.0" prefWidth="150.0" />
+      <ComboBox fx:id="cmbNumero" layoutX="411.0" layoutY="101.0" prefWidth="150.0" />
+      <Button layoutX="496.0" layoutY="155.0" mnemonicParsing="false" onAction="#ventanaCompra" text="Compras" />
+      <Button layoutX="379.0" layoutY="155.0" mnemonicParsing="false" onAction="#ventanaPrincipal" text="Menu Principal" />
+   </children>
+</AnchorPane>

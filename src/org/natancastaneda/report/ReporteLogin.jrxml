@@ -1,0 +1,115 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<jasperReport xmlns="http://jasperreports.sourceforge.net/jasperreports" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://jasperreports.sourceforge.net/jasperreports http://jasperreports.sourceforge.net/xsd/jasperreport.xsd" name="ReporteLogin" language="groovy" pageWidth="842" pageHeight="595" orientation="Landscape" columnWidth="802" leftMargin="20" rightMargin="20" topMargin="20" bottomMargin="20" uuid="b2076033-682d-47a4-a54a-10b5c8adb9ac">
+	<property name="ireport.zoom" value="1.0"/>
+	<property name="ireport.x" value="0"/>
+	<property name="ireport.y" value="0"/>
+	<queryString>
+		<![CDATA[sp_ListarUsuarios]]>
+	</queryString>
+	<field name="codigoUsuario" class="java.lang.Integer"/>
+	<field name="nombreUsuario" class="java.lang.String"/>
+	<field name="email" class="java.lang.String"/>
+	<field name="usuario" class="java.lang.String"/>
+	<field name="contrasena" class="java.lang.String"/>
+	<field name="tipoUsuario" class="java.lang.String"/>
+	<background>
+		<band splitType="Stretch"/>
+	</background>
+	<title>
+		<band height="79" splitType="Stretch">
+			<staticText>
+				<reportElement x="255" y="0" width="313" height="63" uuid="aa803a9b-2381-4960-9333-396afc2595c2"/>
+				<textElement>
+					<font size="24" isBold="true"/>
+				</textElement>
+				<text><![CDATA[NEXT SPORT REPORTE]]></text>
+			</staticText>
+			<image>
+				<reportElement x="15" y="0" width="193" height="69" uuid="0e5ba354-fc0f-45be-8b48-1b344d2e17b6"/>
+				<imageExpression><![CDATA["C:\\Users\\informatica\\Desktop\\Castañeda Hidalgo, Natán Benjamín. 2013327\\NextSport2013327\\src\\org\\natancastaneda\\image\\Logo.jpg"]]></imageExpression>
+			</image>
+		</band>
+	</title>
+	<pageHeader>
+		<band height="29" splitType="Stretch">
+			<staticText>
+				<reportElement x="341" y="6" width="120" height="20" uuid="a6dfbfe4-53a1-4bf4-bdba-c7660b51ca95"/>
+				<textElement>
+					<font isBold="false"/>
+				</textElement>
+				<text><![CDATA[REPORTE DE LOGIN]]></text>
+			</staticText>
+			<line>
+				<reportElement x="6" y="26" width="796" height="1" forecolor="#FF3333" uuid="d044c7fe-f0b1-49a4-a22a-804020533aea"/>
+				<graphicElement>
+					<pen lineWidth="6.0" lineStyle="Solid"/>
+				</graphicElement>
+			</line>
+		</band>
+	</pageHeader>
+	<columnHeader>
+		<band height="61" splitType="Stretch">
+			<staticText>
+				<reportElement x="0" y="0" width="100" height="20" uuid="9edab73a-c8a5-4a7d-a15d-5f43403224ec"/>
+				<text><![CDATA[Codigo del usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="133" y="0" width="100" height="20" uuid="07edb186-695d-4795-8e1f-74efb03e7006"/>
+				<text><![CDATA[Nombre del usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="265" y="0" width="100" height="20" uuid="ac7c3fcc-339a-484c-9374-62bdf03cf5fb"/>
+				<text><![CDATA[Email]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="400" y="0" width="100" height="20" uuid="6420387f-9ed4-4b16-bc21-ff3b7d1e265f"/>
+				<text><![CDATA[Usuario]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="532" y="0" width="100" height="20" uuid="edf38c5d-c5cb-417a-9616-8ba9b753a78c"/>
+				<text><![CDATA[Contraseña]]></text>
+			</staticText>
+			<staticText>
+				<reportElement x="672" y="0" width="100" height="20" uuid="92f9924d-c0aa-43e6-bb61-adb2551d2877"/>
+				<text><![CDATA[tipoUsuario]]></text>
+			</staticText>
+		</band>
+	</columnHeader>
+	<detail>
+		<band height="125" splitType="Stretch">
+			<textField>
+				<reportElement x="0" y="0" width="100" height="20" uuid="c1e4f58c-ad17-4c62-b841-4f2c28f37608"/>
+				<textFieldExpression><![CDATA[$F{codigoUsuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="133" y="0" width="100" height="20" uuid="076f95b5-5249-4eef-8051-1615ff18d1f2"/>
+				<textFieldExpression><![CDATA[$F{nombreUsuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="265" y="0" width="100" height="20" uuid="09b191a8-2eaa-46f5-b804-9da96e22cc9e"/>
+				<textFieldExpression><![CDATA[$F{email}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="400" y="0" width="100" height="20" uuid="76cf6b36-475d-43c2-9fa5-5886f144f9e0"/>
+				<textFieldExpression><![CDATA[$F{usuario}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="532" y="0" width="100" height="20" uuid="4619f768-94d6-4321-b787-84acc7560b99"/>
+				<textFieldExpression><![CDATA[$F{contrasena}]]></textFieldExpression>
+			</textField>
+			<textField>
+				<reportElement x="672" y="0" width="100" height="20" uuid="78415b21-ada2-4204-92dc-8d0a0850373b"/>
+				<textFieldExpression><![CDATA[$F{tipoUsuario}]]></textFieldExpression>
+			</textField>
+		</band>
+	</detail>
+	<columnFooter>
+		<band height="45" splitType="Stretch"/>
+	</columnFooter>
+	<pageFooter>
+		<band height="54" splitType="Stretch"/>
+	</pageFooter>
+	<summary>
+		<band height="42" splitType="Stretch"/>
+	</summary>
+</jasperReport>

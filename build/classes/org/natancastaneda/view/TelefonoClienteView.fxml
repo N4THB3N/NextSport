@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.text.*?>
+<?import javafx.scene.control.*?>
+<?import java.lang.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane maxHeight="-Infinity" maxWidth="-Infinity" minHeight="-Infinity" minWidth="-Infinity" prefHeight="400.0" prefWidth="495.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.natancastaneda.controller.TelefonoClienteController">
+   <children>
+      <Label layoutX="87.0" layoutY="27.0" text="Tabla Telefono Cliente">
+         <font>
+            <Font name="Arial" size="32.0" />
+         </font>
+      </Label>
+      <Label layoutX="23.0" layoutY="71.0" text="Codigo Telefono Cliente" />
+      <Label layoutX="26.0" layoutY="106.0" text="Numero" />
+      <Label layoutX="266.0" layoutY="71.0" text="Descripcion" />
+      <Label layoutX="248.0" layoutY="110.0" text="Codigo Cliente" />
+      <TextField fx:id="txtNumero" layoutX="78.0" layoutY="106.0" />
+      <ComboBox fx:id="cmbTelefono" layoutX="163.0" layoutY="67.0" prefHeight="25.0" prefWidth="95.0" />
+      <TextField fx:id="txtDescripcion" layoutX="335.0" layoutY="76.0" />
+      <TableView fx:id="tblTelefonos" layoutX="14.0" layoutY="140.0" onKeyReleased="#seleccionarElemento" onMouseClicked="#seleccionarElemento" prefHeight="210.0" prefWidth="467.0">
+        <columns>
+          <TableColumn fx:id="colNumero" prefWidth="232.0" text="Numero" />
+            <TableColumn fx:id="colDescripcion" prefWidth="234.0" text="Descripcion" />
+        </columns>
+      </TableView>
+      <Button fx:id="btnNuevo" layoutX="42.0" layoutY="360.0" mnemonicParsing="false" onAction="#nuevo" text="Nuevo" />
+      <Button fx:id="btnEliminar" layoutX="142.0" layoutY="360.0" mnemonicParsing="false" onAction="#eliminar" text="Eliminar" />
+      <Button fx:id="btnEditar" layoutX="304.0" layoutY="360.0" mnemonicParsing="false" onAction="#editar" text="Editar" />
+      <Button fx:id="btnReporte" layoutX="402.0" layoutY="360.0" mnemonicParsing="false" onAction="#reporte" text="Reporte" />
+      <ComboBox fx:id="cmbCliente" layoutX="335.0" layoutY="106.0" prefHeight="25.0" prefWidth="149.0" />
+      <Button layoutX="417.0" layoutY="15.0" mnemonicParsing="false" onAction="#ventanaClientes" text="Clientes" />
+      <Button layoutX="14.0" layoutY="3.0" mnemonicParsing="false" onAction="#ventanaPrincipal" text="Menu Principal" />
+   </children>
+</AnchorPane>
